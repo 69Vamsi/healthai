@@ -8,9 +8,8 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 import os
-HF_API_KEY = os.getenv("HF_API_KEY")   # or os.getenv("HF_API_KEY", "default_if_local")
+HF_API_KEY = os.getenv("HF_API_KEY")
 MODEL_URL = os.getenv("MODEL_URL")
-
 MODEL_URL = "https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english"
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import torch
