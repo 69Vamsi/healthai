@@ -114,4 +114,8 @@ MIT License
 
 - FastAPI — https://fastapi.tiangolo.com/
 - Transformers — https://huggingface.co/docs/transformers
+<<<<<<< HEAD
 - FLAN-T5 by Google — https://huggingface.co/google/flan-t5-small
+=======
+- FLAN-T5 by Google — https://huggingface.co/google/flan-t5-small
+>>>>>>> 9d96543d3fb65d221c7405f0161026bae0cf2d1d
