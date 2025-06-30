@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to Health AI</h1>
+
+    <form action="/symptom" method="post">
+        <label for="symptoms">Enter symptoms:</label>
+        <input type="text" name="symptoms" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    <form action="/remedy" method="post">
+        <label for="disease">Get home remedy for:</label>
+        <input type="text" name="disease" required>
+        <button type="submit">Suggest</button>
+    </form>
+
+    <form action="/chat" method="post">
+        <label for="question">Ask a health question:</label>
+        <input type="text" name="question" required>
+        <button type="submit">Ask</button>
+    </form>
+
+    <form action="/analytics" method="post">
+        <label for="metrics">Health metrics:</label>
+        <input type="text" name="metrics" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
